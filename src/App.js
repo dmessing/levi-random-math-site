@@ -47,6 +47,9 @@ class App extends React.Component {
       <div className="ui container">
         <div className="ui grid">
           <div className="row">
+            <div>Marv's Magical Number Randomizer</div>
+          </div>
+          <div className="row">
             <div className="two wide column">
               <label className="ui black circular label">
                 {this.state.firstNum}
