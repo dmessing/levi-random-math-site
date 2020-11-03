@@ -44,35 +44,39 @@ class App extends React.Component {
   render() {
     console.log("here baby");
     return (
-      <div className="ui container">
-        <div className="ui grid">
-          <div className="row">
-            <div>Marv's Magical Number Randomizer</div>
+      <div className="ui container segment">
+        <div className="ui  attached message">
+          <h1 className="ui header">
+            <i className="calculator icon"></i>Mr Litman's Magical Number
+            Randomizer
+          </h1>
+        </div>
+        <div className="ui segment four column grid centered">
+          <div className="ui  two column centered">
+            <label
+              alt="first number"
+              className="ui massive black circular label"
+            >
+              {this.state.firstNum}
+            </label>
           </div>
-          <div className="row">
-            <div className="two wide column">
-              <label className="ui black circular label">
-                {this.state.firstNum}
-              </label>
-            </div>
-            <div className="two wide column">
-              <label alt="second number" className="ui black circular label">
-                {this.state.secondNum}
-              </label>
-            </div>
+          <div className="ui  two column centered">
+            <label
+              alt="second number"
+              className="ui massive black circular label"
+            >
+              {this.state.secondNum}
+            </label>
           </div>
-          <div className="row">
-            <div className="center column">
-              <button
-                className="ui animated primary button"
-                onClick={() => this.handleClick()}
-              >
-                <div className="visible content">Generate</div>
-                <div className="hidden content">
-                  <i className="right arrow icon"></i>
-                </div>
-              </button>
-            </div>
+        </div>
+
+        <div
+          className="ui bottom attached primary animated button"
+          onClick={() => this.handleClick()}
+        >
+          <div className="visible content huge">Generate Random Numbers</div>
+          <div className="hidden content">
+            <i className="right arrow icon"></i>
           </div>
         </div>
       </div>
